@@ -12,21 +12,19 @@ class MyCircularQueue {
     }
 
     public boolean enQueue(int value) {
-        if (currSize < maxSize){
+        if (currSize < maxSize) {
             data[(head + currSize) % data.length] = value;
             currSize++;
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     public boolean deQueue() {
-        if (currSize > 0){
+        if (currSize > 0) {
             head = (head + 1) % data.length;
             currSize--;
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     public int Front() {
